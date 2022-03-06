@@ -38,3 +38,8 @@ Rather than have a tons of methods inside it, the goal is have a couple of prope
 - POST - /posts - create a new post
 - PUT - /posts/:id - update a post
 - DELETE - /posts/:id - delete a post
+
+### Two important rules for this project
+
+- in TS, all objects keys are strings
+- In JS (and therefore TS), all object keys are strings
