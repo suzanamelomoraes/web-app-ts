@@ -22,3 +22,19 @@ Phase 1: class User
 - trigger(eventName:string): void
 - fetch(): Promise
 - save(): Promise
+
+Phase 2
+
+Rather than have a tons of methods inside it, the goal is have a couple of properties that class User can use to delegate out important operations
+
+- Attributes - to store properties tied to the user
+- Events - to tell other parts whenever data tied to a user is changed
+- Sync - to save and retrieve this persons data to a remote server
+
+### REST conventions
+
+- GET - /posts - retrieve all posts
+- GET - /posts/:id - retrieve post with the given ID
+- POST - /posts - create a new post
+- PUT - /posts/:id - update a post
+- DELETE - /posts/:id - delete a post
