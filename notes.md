@@ -31,6 +31,14 @@ Rather than have a tons of methods inside it, the goal is have a couple of prope
 - Events - to tell other parts whenever data tied to a user is changed
 - Sync - to save and retrieve this persons data to a remote server
 
+Phase 3
+
+At this moment to use the methods, it's necessary to this kind of call:
+user.events.trigger
+
+- Direct passthrough of arguments - get(), on(), trigger() - by using get property
+- Need coordination between different modules in User - set(), fetch(), save()
+
 ### REST conventions
 
 - GET - /posts - retrieve all posts

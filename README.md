@@ -13,6 +13,7 @@ This project is part of the "Typescript: The Complete Developer's Guide" course 
 - REST
 - Generics
 - Generic Constraints
+- Accessors
 
 Please, feel free to contribute with comments or include pull requests.
 
