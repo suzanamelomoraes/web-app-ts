@@ -1,8 +1,5 @@
 import axios, { AxiosPromise } from "axios";
 
-// .then((response: AxiosResponse): void => {
-//     this.set(response.data)});
-
 interface HasId {
   id?: number;
 }
