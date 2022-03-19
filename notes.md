@@ -13,17 +13,17 @@
 
 ### Steps
 
-Phase 1: class User
+- Phase 1: class User
 
-- private data: UserProps
-- get(propName: string): (string | number)
-- set(update: UserProps): void // using Object.assign()
-- on(eventName: string, callback: () => void): void
-- trigger(eventName:string): void
-- fetch(): Promise
-- save(): Promise
+* private data: UserProps
+* get(propName: string): (string | number)
+* set(update: UserProps): void // using Object.assign()
+* on(eventName: string, callback: () => void): void
+* trigger(eventName:string): void
+* fetch(): Promise
+* save(): Promise
 
-Phase 2
+- Phase 2
 
 Rather than have a tons of methods inside it, the goal is have a couple of properties that class User can use to delegate out important operations
 
@@ -31,13 +31,21 @@ Rather than have a tons of methods inside it, the goal is have a couple of prope
 - Events - to tell other parts whenever data tied to a user is changed
 - Sync - to save and retrieve this persons data to a remote server
 
-Phase 3
+* Phase 3
 
 At this moment to use the methods, it's necessary to this kind of call:
 user.events.trigger
 
 - Direct passthrough of arguments - get(), on(), trigger() - by using get property
 - Need coordination between different modules in User - set(), fetch(), save()
+
+- Reminder on Accessors - 'get' - Good when you are not making changes or modification on a property using a function, but only retrieving a information
+
+* Phase 4
+
+- The nested objects are all public - they probably shouldn't be
+- The nested objects are hardcoded + don't use interfaces
+- We don't want to have to re implement all these methods for each new 'model' we create
 
 ### REST conventions
 
