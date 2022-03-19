@@ -1,7 +1,7 @@
 // import axios from "axios";
 import { User } from "./models/User";
 
-const user = new User({ name: "new record", age: 99 });
+// const user = new User({ name: "new record", age: 99 });
 // const user = new User({ name: "myname", age: 666 });
 
 // user.set({ name: "newname" });
@@ -12,11 +12,11 @@ const user = new User({ name: "new record", age: 99 });
 // user.save();
 
 // Testing approach using get as an accessor
-user.on("change", () => {
-  console.log("User was changed");
-});
+// user.on("change", () => {
+//   console.log("User was changed");
+// });
 // user.trigger("change");
-user.set({ name: "New name", age: 40 });
+// user.set({ name: "New name", age: 40 });
 
 // Testing Eventing class
 // user.events.on("change", () => {
@@ -24,10 +24,10 @@ user.set({ name: "New name", age: 40 });
 // });
 // user.events.trigger("change");
 
-// Testing axios
+//Testing axios
 // axios.post("http://localhost:3000/users", {
-//   name: "myname",
-//   age: 20,
+//   name: "Test name 3",
+//   age: 33,
 // });
 // axios.get("http://localhost:3000/users/1");
 
@@ -45,7 +45,7 @@ user.set({ name: "New name", age: 40 });
 // user.trigger("click");
 
 // Testing getget
-console.log(user.get("name"));
+// console.log(user.get("name"));
 // How to fix it -> making get in Attributes an arrow function
 
 // Reminder on how 'this' works in JS
@@ -61,3 +61,23 @@ console.log(user.get("name"));
 // if
 // const printColor = colors.printColor;
 // printColor() will be undefined
+
+// Testing fetch after refactoring
+
+// const user = new User({ id: 1 });
+
+// user.on("change", () => {
+//   console.log(user);
+// });
+
+// user.fetch();
+
+// Testing save method after refactoring
+
+// const user = new User({ id: 1, name: "newer name", age: 0 });
+
+// user.on("save", () => {
+//   console.log(user);
+// });
+
+// user.save();
