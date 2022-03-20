@@ -29,17 +29,19 @@ export class Model<T extends HasId> {
     private events: Events
   ) {}
 
-  get on() {
-    return this.events.on;
-  }
+  // refactor to a more shortened passthrough methods
+  // can only be used when related classes are instantiated inside the constructor
+  // as they will run in the compiled JS before the methods
+  // instead of:
+  //   get on() {
+  //     return this.events.on;
+  //   }
 
-  get trigger() {
-    return this.events.trigger;
-  }
+  on = this.events.on;
 
-  get get() {
-    return this.attributes.get;
-  }
+  trigger = this.events.trigger;
+
+  get = this.attributes.get;
 
   set(update: T): void {
     this.attributes.set(update);
