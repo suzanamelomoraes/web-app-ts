@@ -30,7 +30,7 @@ export class Model<T extends HasId> {
   ) {}
 
   // refactor to a more shortened passthrough methods
-  // can only be used when related classes are instantiated inside the constructor
+  // can only be used when related classes are initialized inside the constructor
   // as they will run in the compiled JS before the methods
   // instead of:
   //   get on() {
