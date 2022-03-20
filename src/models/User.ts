@@ -12,6 +12,8 @@ export interface UserProps {
 const rootUrl = "http://localhost:3000/users";
 
 export class User extends Model<UserProps> {
+  // Using composition to create a static method that pre-configure user
+  // it includes the necessary submodules that can be swapped accordingly
   static buildUser(attrs: UserProps): User {
     return new User(
       new Attributes<UserProps>(attrs),
