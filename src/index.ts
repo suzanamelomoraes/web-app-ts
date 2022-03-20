@@ -1,6 +1,16 @@
 // import axios from "axios";
 import { User } from "./models/User";
 
+const user = User.buildUser({ id: 1 });
+
+user.on("change", () => {
+  console.log(user);
+});
+
+user.fetch();
+
+// Package of tests made before the final refactor where the reusable model class was created
+
 // const user = new User({ name: "new record", age: 99 });
 // const user = new User({ name: "myname", age: 666 });
 
@@ -24,7 +34,7 @@ import { User } from "./models/User";
 // });
 // user.events.trigger("change");
 
-//Testing axios
+//Testing only axios
 // axios.post("http://localhost:3000/users", {
 //   name: "Test name 3",
 //   age: 33,
