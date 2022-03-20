@@ -14,6 +14,7 @@ This project is part of the "Typescript: The Complete Developer's Guide" course 
 - Generics
 - Generic Constraints
 - Accessors
+- Inheritance
 
 Please, feel free to contribute with comments or include pull requests.
 
