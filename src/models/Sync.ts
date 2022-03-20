@@ -1,5 +1,7 @@
 import axios, { AxiosPromise } from "axios";
 
+// Constraint to 'promise' T that it will have a 'id' property
+
 interface HasId {
   id?: number;
 }
