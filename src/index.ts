@@ -1,13 +1,40 @@
 // import axios from "axios";
-import { User } from "./models/User";
+import { User, UserProps } from "./models/User";
+import { Collection } from "./models/Collection";
 
-const user = User.buildUser({ id: 1 });
+// Testing static method inside User that instantiate Collection
 
-user.on("change", () => {
-  console.log(user);
+const collection = User.buildUserCollection();
+
+collection.on("change", () => {
+  console.log(collection);
 });
 
-user.fetch();
+collection.fetch();
+
+// Testing Collection
+
+// const rootUrl = "http://localhost:3000/users";
+
+// const collection = new Collection<User, UserProps>(rootUrl, (json: UserProps) =>
+//   User.buildUser(json)
+// );
+
+// collection.on("change", () => {
+//   console.log(collection);
+// });
+
+// collection.fetch();
+
+// Testing buildUser
+
+// const user = User.buildUser({ id: 1 });
+
+// user.on("change", () => {
+//   console.log(user);
+// });
+
+// user.fetch();
 
 // Package of tests made before the final refactor where the reusable model class was created
 
