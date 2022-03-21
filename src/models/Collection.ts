@@ -3,7 +3,7 @@ import { Eventing } from "./Eventing";
 
 // Refactor Collection to be reusable to any type of data
 // Replacing type User, which includes a type UserProps, we included the generic T
-// plus a second generic called K, which represents, in this example, the User looking model
+// plus a second generic called K (to the type of json data), which represents, in this example, the User looking model
 export class Collection<T, K> {
   models: T[] = [];
   events: Eventing = new Eventing();
