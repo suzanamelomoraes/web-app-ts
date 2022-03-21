@@ -1,4 +1,6 @@
-### PLanning the application
+## PLanning the application
+
+### Model Classes
 
 - Need to create a class to represent a User and all this data (properties)
 - User class needs to have the ability to store, retrieve and update data
@@ -59,3 +61,16 @@ user.events.trigger
 
 - in TS, all objects keys are strings
 - In JS (and therefore TS), all object keys are strings
+
+### View Classes
+
+- Each view must produce HTML
+- We should be able to nest one view in another
+- Need to handle user events
+- There will be a coupling between a view and a model
+- We need to be able to reach into the HTML produced by a view and get a specific element
+
+### Approach
+
+- Implement UserForm
+- Extract reusable logic from it and use that to build 'UserShow' and 'UserEdit'
