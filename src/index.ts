@@ -1,16 +1,23 @@
 // import axios from "axios";
-import { User, UserProps } from "./models/User";
-import { Collection } from "./models/Collection";
+// import { User, UserProps } from "./models/User";
+// import { Collection } from "./models/Collection";
+import { UserForm } from "./views/UserForm";
+
+const userForm = new UserForm(document.getElementById("root"));
+
+userForm.render();
+
+// Testing UserForm
 
 // Testing static method inside User that instantiate Collection
 
-const collection = User.buildUserCollection();
+// const collection = User.buildUserCollection();
 
-collection.on("change", () => {
-  console.log(collection);
-});
+// collection.on("change", () => {
+//   console.log(collection);
+// });
 
-collection.fetch();
+// collection.fetch();
 
 // Testing Collection
 
